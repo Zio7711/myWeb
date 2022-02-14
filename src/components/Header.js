@@ -48,18 +48,18 @@ function Header() {
         </nav>
 
         <div className='social-links'>
-          <a href='#' className='twitter'>
+          <span className='twitter'>
             <i className='bi bi-twitter'></i>
-          </a>
-          <a href='#' className='facebook'>
+          </span>
+          <span className='facebook'>
             <i className='bi bi-facebook'></i>
-          </a>
-          <a href='#' className='instagram'>
+          </span>
+          <span className='instagram'>
             <i className='bi bi-instagram'></i>
-          </a>
-          <a href='#' className='linkedin'>
+          </span>
+          <span className='linkedin'>
             <i className='bi bi-linkedin'></i>
-          </a>
+          </span>
         </div>
       </div>
     </header>
