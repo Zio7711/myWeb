@@ -8,6 +8,8 @@ function App() {
     <div className='App'>
       <Header />
       <Routes>
+        <Route path='/' />
+
         <Route path='/about' element={<About />} />
       </Routes>
     </div>

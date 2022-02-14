@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
   const [headerLocation, setHeaderLocation] = useState('');
-  const redirect = () => {
-    setHeaderLocation('header-top');
-  };
+  const location = useLocation();
+  console.log(location.pathname);
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setHeaderLocation('header-top');
+    } else {
+      setHeaderLocation('');
+    }
+  }, [location.pathname]);
 
   return (
     <header id='header' className={headerLocation}>
@@ -21,15 +29,25 @@ function Header() {
         <nav id='navbar' className='navbar'>
           <ul>
             <li>
-              <a className='nav-link active' href='#header'>
+              <Link
+                to='/'
+                className={
+                  location.pathname === '/' ? 'nav-link active' : 'nav-link'
+                }
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <Link to='/about' onClick={redirect}>
-                <a className='nav-link' href='/#about'>
-                  About
-                </a>
+              <Link
+                to='/about'
+                className={
+                  location.pathname === '/about'
+                    ? 'nav-link active'
+                    : 'nav-link'
+                }
+              >
+                About
               </Link>
             </li>
             <li>
