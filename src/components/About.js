@@ -1,8 +1,21 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 function About() {
+  const [isActive, setIsActive] = useState('');
+
+  const showContent = () => {
+    setTimeout(() => {
+      setIsActive('active section-show');
+    }, [350]);
+  };
+
+  useEffect(() => {
+    showContent();
+  }, []);
+
   return (
-    <section id='about' className='about active section-show'>
+    <section id='about' className={'about' + isActive}>
       <div className='about-me container'>
         <div className='section-title'>
           <h2>About</h2>
