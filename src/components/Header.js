@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-function Header() {
+function Header({ setShowTimeDelay }) {
   const [headerLocation, setHeaderLocation] = useState('');
   const location = useLocation();
-  console.log(location.pathname);
 
   useEffect(() => {
     if (location.pathname !== '/') {
       setHeaderLocation('header-top');
+      setShowTimeDelay(0);
     } else {
       setHeaderLocation('');
+      setShowTimeDelay(350);
     }
   }, [location.pathname]);
 
@@ -51,9 +52,16 @@ function Header() {
               </Link>
             </li>
             <li>
-              <a className='nav-link' href='#resume'>
+              <Link
+                to='/resume'
+                className={
+                  location.pathname === '/resume'
+                    ? 'nav-link active'
+                    : 'nav-link'
+                }
+              >
                 Resume
-              </a>
+              </Link>
             </li>
             <li>
               <a className='nav-link' href='#services'>

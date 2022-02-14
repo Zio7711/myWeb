@@ -1,13 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-function About() {
+function About({ showTimeDelay }) {
   const [isActive, setIsActive] = useState('');
 
   const showContent = () => {
     setTimeout(() => {
-      setIsActive('active section-show');
-    }, [350]);
+      setIsActive(' section-show');
+    }, [showTimeDelay]);
   };
 
   useEffect(() => {
