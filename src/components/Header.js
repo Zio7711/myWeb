@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Header() {
+  const [headerLocation, setHeaderLocation] = useState('');
+  const redirect = () => {
+    setHeaderLocation('header-top');
+  };
+
   return (
-    <header id='header'>
+    <header id='header' className={headerLocation}>
       <div className='container'>
         <h1>
-          <a href='index.html'>Emily Jones</a>
+          <a href='/'>Emily Jones</a>
         </h1>
         <h2>
           I'm a passionate <span>graphic designer</span> from New York
@@ -19,9 +26,11 @@ function Header() {
               </a>
             </li>
             <li>
-              <a className='nav-link' href='#about'>
-                About
-              </a>
+              <Link to='/about' onClick={redirect}>
+                <a className='nav-link' href='/#about'>
+                  About
+                </a>
+              </Link>
             </li>
             <li>
               <a className='nav-link' href='#resume'>
@@ -48,18 +57,18 @@ function Header() {
         </nav>
 
         <div className='social-links'>
-          <span className='twitter'>
+          <a href='/' className='twitter'>
             <i className='bi bi-twitter'></i>
-          </span>
-          <span className='facebook'>
+          </a>
+          <a href='/' className='facebook'>
             <i className='bi bi-facebook'></i>
-          </span>
-          <span className='instagram'>
+          </a>
+          <a href='/' className='instagram'>
             <i className='bi bi-instagram'></i>
-          </span>
-          <span className='linkedin'>
+          </a>
+          <a href='/' className='linkedin'>
             <i className='bi bi-linkedin'></i>
-          </span>
+          </a>
         </div>
       </div>
     </header>
