@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function Header({ setShowTimeDelay }) {
-  const [headerLocation, setHeaderLocation] = useState('');
+  const [headerLocation, setHeaderLocation] = useState(' ');
+  const [mobileNavShow, setMobileNavShow] = useState(' ');
   const location = useLocation();
 
   useEffect(() => {
@@ -17,18 +18,30 @@ function Header({ setShowTimeDelay }) {
     }
   }, [location.pathname]);
 
+  const mobileNav = () => {
+    if (mobileNavShow === '') {
+      setMobileNavShow(' navbar-mobile');
+    } else {
+      setMobileNavShow('');
+    }
+  };
+
   return (
     <header id='header' className={headerLocation}>
       <div className='container'>
         <h1>
-          <a href='/'>Emily Jones</a>
+          <Link to='/'>Ziao(Zio) Tan</Link>
         </h1>
         <h2>
-          I'm a passionate <span>graphic designer</span> from New York
+          I'm a passionate <span>Web Developer</span> from Vancouver
         </h2>
 
-        <nav id='navbar' className='navbar'>
-          <ul>
+        <nav id='navbar' className={'navbar' + mobileNavShow}>
+          <ul
+            onClick={() => {
+              setMobileNavShow('');
+            }}
+          >
             <li>
               <Link
                 to='/'
@@ -79,7 +92,7 @@ function Header({ setShowTimeDelay }) {
               </a>
             </li>
           </ul>
-          <i className='bi bi-list mobile-nav-toggle'></i>
+          <i className='bi bi-list mobile-nav-toggle' onClick={mobileNav}></i>
         </nav>
 
         <div className='social-links'>
