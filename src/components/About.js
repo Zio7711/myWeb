@@ -27,29 +27,36 @@ function About({ showTimeDelay }) {
             <img src='assets/img/me.jpg' className='img-fluid' alt='' />
           </div>
           <div className='col-lg-8 pt-4 pt-lg-0 content' data-aos='fade-left'>
-            <h3>UI/UX &amp; Graphic Designer</h3>
+            <h3>Web Developer</h3>
             <p className='fst-italic'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I turned to a full-stack web developer from a survey technologist
+              with two-year experience. I became passionate about programming
+              because of the spatial databases course I took from BCIT. I enjoy
+              the sense of achievement when finding creative solutions to
+              complicated coding problems. I decide to quit my job and continue
+              exploring the programming world.
             </p>
             <div className='row'>
               <div className='col-lg-6'>
                 <ul>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>Birthday:</strong> <span>1 May 1995</span>
+                    <strong>Birthday:</strong> <span>20 July 1996</span>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>Website:</strong> <span>www.example.com</span>
+                    <strong>Website:</strong>{' '}
+                    <a href='http://zio7711.gitee.io/'>
+                      http://zio7711.gitee.io/
+                    </a>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>Phone:</strong> <span>+123 456 7890</span>
+                    <strong>Phone:</strong> <span>+1 236 777 7641</span>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>City:</strong> <span>New York, USA</span>
+                    <strong>City:</strong> <span>Vancouver BC, Canada</span>
                   </li>
                 </ul>
               </div>
@@ -57,15 +64,15 @@ function About({ showTimeDelay }) {
                 <ul>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>Age:</strong> <span>30</span>
+                    <strong>Age:</strong> <span>26</span>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>Degree:</strong> <span>Master</span>
+                    <strong>Degree:</strong> <span>Bachelor</span>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
-                    <strong>PhEmailone:</strong> <span>email@example.com</span>
+                    <strong>Email:</strong> <span>zi.ao.tan@outlook.com</span>
                   </li>
                   <li>
                     <i className='bi bi-chevron-right'></i>{' '}
@@ -74,15 +81,7 @@ function About({ showTimeDelay }) {
                 </ul>
               </div>
             </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
-            </p>
+            <p>This section will be filled later</p>
           </div>
         </div>
       </div>
